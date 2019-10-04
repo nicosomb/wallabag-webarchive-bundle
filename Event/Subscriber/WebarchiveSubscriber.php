@@ -5,7 +5,7 @@ namespace Nicosomb\WallabagWebarchiveBundle\Event\Subscriber;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Psr\Log\LoggerInterface;
 use Wallabag\CoreBundle\Helper\ContentProxy;
-use Wallabag\WebArchiveBundle\Helper\Webarchive;
+use Nicosomb\WallabagWebarchiveBundle\Helper\Webarchive;
 use Wallabag\CoreBundle\Event\EntrySavedEvent;
 use Doctrine\ORM\EntityManager;
 

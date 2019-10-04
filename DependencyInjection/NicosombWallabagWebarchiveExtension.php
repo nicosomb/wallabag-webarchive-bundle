@@ -19,7 +19,7 @@ class NicosombWallabagWebarchiveExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
-        $container->setParameter('wallabag_webarchive.enabled', $config['enabled']);
+        $container->setParameter('nicosomb_wallabag_webarchive.enabled', $config['enabled']);
     }
 
     public function getAlias()

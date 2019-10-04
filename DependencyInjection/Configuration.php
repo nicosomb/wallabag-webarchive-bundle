@@ -13,7 +13,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('wallabag_webarchive');
+        $rootNode = $treeBuilder->root('nicosomb_wallabag_webarchive');
 
         $rootNode
             ->children()

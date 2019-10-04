@@ -1,6 +1,6 @@
 <?php
 
-namespace Nicosom\WallabagWebarchiveBundle\Helper;
+namespace Nicosomb\WallabagWebarchiveBundle\Helper;
 
 use Psr\Log\LoggerInterface;
 use GuzzleHttp\Client;

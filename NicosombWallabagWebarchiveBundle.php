@@ -1,6 +1,6 @@
 <?php
 
-namespace Nicosomb\WallabagWebArchiveBundle;
+namespace Nicosomb\WallabagWebarchiveBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

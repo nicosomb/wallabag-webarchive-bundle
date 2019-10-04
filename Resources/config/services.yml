@@ -1,9 +1,9 @@
 services:
     nicosomb.wallabag.subscriber.webarchive:
-        class: Wallabag\WebarchiveBundle\Event\Subscriber\WebarchiveSubscriber
+        class: Nicosomb\WallabagWebarchiveBundle\Event\Subscriber\WebarchiveSubscriber
         arguments:
             - "@doctrine.orm.default_entity_manager"
-            - "%nicosomb.wallabag_webarchive.enabled%"
+            - "%nicosomb_wallabag_webarchive.enabled%"
             - "@nicosomb.wallabag.entry.webarchive"
             - "@wallabag_core.content_proxy"
             - "@logger"
@@ -16,5 +16,5 @@ services:
     nicosomb.wallabag.entry.webarchive:
         class: Nicosomb\WallabagWebarchiveBundle\Helper\Webarchive
         arguments:
-            - "@Nicosomb.wallabag.entry.webarchive.client"
+            - "@nicosomb.wallabag.entry.webarchive.client"
             - "@logger"
