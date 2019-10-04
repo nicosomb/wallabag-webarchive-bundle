@@ -1,0 +1,31 @@
+{
+  "name": "nicosomb/wallabag-webarchive-bundle",
+  "description": "If http status is 404, ask web.archive if there is a snapshot to archive it.",
+  "type": "symfony-bundle",
+  "keywords": [
+    "wallabag",
+    "wallabag-plugin",
+    "symfony3",
+    "bundle",
+    "webarchive"
+  ],
+  "homepage": "https://github.com/nicosomb/wallabag-webarchive-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nicolas Lœuillet",
+      "email": "nicolas@loeuillet.org",
+      "homepage": "https://nicolas.loeuillet.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Nicosomb\\WallabagWebarchiveBundle\\": ""
+    }
+},
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

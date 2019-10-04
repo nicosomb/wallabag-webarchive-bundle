@@ -1,0 +1,20 @@
+services:
+    nicosomb.wallabag.subscriber.webarchive:
+        class: Wallabag\WebarchiveBundle\Event\Subscriber\WebarchiveSubscriber
+        arguments:
+            - "@doctrine.orm.default_entity_manager"
+            - "%nicosomb.wallabag_webarchive.enabled%"
+            - "@nicosomb.wallabag.entry.webarchive"
+            - "@wallabag_core.content_proxy"
+            - "@logger"
+        tags:
+            - { name: kernel.event_subscriber }
+
+    nicosomb.wallabag.entry.webarchive.client:
+        class: GuzzleHttp\Client
+
+    nicosomb.wallabag.entry.webarchive:
+        class: Nicosomb\WallabagWebarchiveBundle\Helper\Webarchive
+        arguments:
+            - "@Nicosomb.wallabag.entry.webarchive.client"
+            - "@logger"
