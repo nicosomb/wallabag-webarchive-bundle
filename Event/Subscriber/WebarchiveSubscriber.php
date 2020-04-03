@@ -55,7 +55,9 @@ class WebarchiveSubscriber implements EventSubscriberInterface
         }
 
         $url = $this->webarchive->getArchiveUrl($entry->getUrl());
-        $this->contentProxy->updateEntry($entry, $url);
+        if (false !== $url) {
+            $this->contentProxy->updateEntry($entry, $url);
+        }
 
         $this->em->persist($entry);
         $this->em->flush();

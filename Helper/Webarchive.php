@@ -21,7 +21,7 @@ class Webarchive
      *
      * @param string $url URL of the entry
      *
-     * @return \DateTime
+     * @return string|false
      */
     public function getArchiveUrl($url)
     {
@@ -30,7 +30,7 @@ class Webarchive
         $content = json_decode($body->getContents());
 
         $snapshots = $content->{'archived_snapshots'};
-        if ('{}' === $snapshots) {
+        if (false == isset($snapshots->{'closest'})) {
             $this->logger->debug('WebArchive: no snapshot');
 
             return false;
